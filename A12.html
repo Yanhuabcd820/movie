@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Movie List</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="A12.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="A12-favorite.html">Favorite</a>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <form class="form-inline mt-5 d-flex justify-content-between" id="search-form" style="width: 100%;">
+        <div class="">
+          <label class="sr-only" for="inlineFormInputName2">Search Keyword</label>
+          <input type="text" class="form-control mb-2 mr-sm-2" id="search-input" placeholder="Keyword...">
+          <button type="submit" class="btn btn-primary mb-2" id="search-submit">Search</button>
+        </div>
+        <div class="">
+          <a class="btn btn-secondary mb-2 style-btn" data-style="mode-list" href="javascript:;"><i class="fa fa-bars"
+              aria-hidden="true" data-style="mode-list"></i></a>
+          <a class="btn btn-secondary mb-2 style-btn" data-style="mode-grid" href="javascript:;"><i class="fa fa-th"
+              aria-hidden="true" data-style="mode-grid"></i></a>
+        </div>
+      </form>
+    </div>
+    <div class="row" id="data-panel">
+      <!-- <div class="col-sm-3">
+        <div class="mb-2">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top"
+              src="https://raw.githubusercontent.com/ALPHACamp/movie-list-api/master/public/posters/80PWnSTkygi3QWWmJ3hrAwqvLnO.jpg"
+              alt="Movie Poster">
+            <div class="card-body">
+              <h5 class="card-title">Movie title</h5>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-show-movie" data-toggle="modal"
+                data-target="#movie-modal">More</button>
+              <button class="btn btn-info btn-add-favorite">+</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="movie-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-8" id="movie-poster"><img
+                  src="https://movie-list.alphacamp.io/posters/c9XxwwhPHdaImA2f1WEfEsbhaFB.jpg" alt=""
+                  class="image-movie"></div>
+              <div class="col-sm-4" id="movie-content">
+                <p><em id="movie-date">release date: 2021/03/25</em></p>
+                <p id="movie-description">this is a good movie.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center mt-2" id="paginator">
+      <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+    </ul>
+  </nav>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/indexA12.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
